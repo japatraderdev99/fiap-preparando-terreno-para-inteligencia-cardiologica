@@ -189,7 +189,7 @@ completo em [`FONTES_E_LICENCAS.md`](assets/textos/FONTES_E_LICENCAS.md).
 ### Origem — sinais **reais**, renderizados no formato clínico
 
 Imagens de **ECG de 12 derivações** geradas a partir de sinais reais da base
-**PTB-XL** (18.885 pacientes, PhysioNet, licença **CC BY 4.0**). Cada imagem é um ECG
+**PTB-XL** (21.799 registros de 18.869 pacientes, PhysioNet, licença **CC BY 4.0**). Cada imagem é um ECG
 de 10 segundos de um paciente real, plotado no padrão que o cardiologista lê
 (25 mm/s, 10 mm/mV, grade "papel de ECG"). Gerador:
 [`gerar_imagens_ecg.py`](dados/visuais/gerar_imagens_ecg.py).

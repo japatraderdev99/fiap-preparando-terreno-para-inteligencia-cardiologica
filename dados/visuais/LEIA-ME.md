@@ -10,7 +10,7 @@ Conjunto da **Parte 3 (Dados Visuais / VC)** do projeto CardioIA.
 
 ## Origem
 
-Imagens **renderizadas a partir de sinais reais** da base **PTB-XL** (18.885 pacientes,
+Imagens **renderizadas a partir de sinais reais** da base **PTB-XL** (21.799 registros de 18.869 pacientes,
 Physikalisch-Technische Bundesanstalt, Alemanha), distribuída pelo PhysioNet sob
 licença **Creative Commons Attribution 4.0 (CC BY 4.0)**.
 
