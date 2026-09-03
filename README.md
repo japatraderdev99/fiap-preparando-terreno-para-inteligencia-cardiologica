@@ -14,13 +14,11 @@
 Trabalho individual.
 
 ## 👨‍🎓 Integrantes
-- <a href="https://www.linkedin.com/">Guilherme Yamada Dantas</a> — RM rm568506
+- Guilherme Yamada Dantas — RM rm568506
 
 ## 👩‍🏫 Professores
 ### Tutor(a)
-- _(preencher com o nome do tutor da turma)_
 ### Coordenador(a)
-- André Godoi Chiovato
 
 ---
 
@@ -105,9 +103,11 @@ fiap-preparando-terreno-para-inteligencia-cardiologica/
 │   ├── baixar_dados_brutos.sh              ← baixa os dados brutos (UCI + metadados PTB-XL)
 │   └── empacotar_entrega.sh                ← gera os .zip do pacote público
 │
+├── notebooks/
+│   └── 00_carregar_dados.ipynb             ← carrega e verifica os 3 conjuntos de dados
+│
 ├── .github/                                ← arquivos de configuração do GitHub
 ├── config/                                 ← (reservada) arquivos de configuração das próximas fases
-├── notebooks/                              ← (reservada) notebooks de Colab/Jupyter das próximas fases
 └── src/                                    ← (reservada) código-fonte das próximas fases
 ```
 
@@ -124,8 +124,8 @@ As pastas herdadas do template:
 - **`src`**: código-fonte do projeto ao longo das 7 fases (reservada).
 
 Pastas adicionadas nesta fase: **`dados/`** (datasets numérico e visual + pipelines) e
-**`notebooks/`** (reservada para os notebooks que consumirão estes dados no Colab/Jupyter,
-conforme a dica do enunciado).
+**`notebooks/`** (com `00_carregar_dados.ipynb`, que carrega os três conjuntos e serve
+de ponto de partida para o Colab/Jupyter das próximas fases — conforme a dica do enunciado).
 
 ---
 
@@ -312,12 +312,14 @@ python assets/textos/preparar_textos.py
 python dados/visuais/gerar_imagens_ecg.py --por-classe 24
 ```
 
-**Carregar os dados em um notebook (Colab/Jupyter):**
+**Carregar e verificar os três conjuntos:** abra
+[`notebooks/00_carregar_dados.ipynb`](notebooks/00_carregar_dados.ipynb) (Jupyter ou
+Google Colab). Em resumo:
 
 ```python
 import pandas as pd
-df = pd.read_csv("dados/numericos/cardioia_heart_disease.csv")
-labels = pd.read_csv("dados/visuais/labels.csv")
+df = pd.read_csv("dados/numericos/cardioia_heart_disease.csv")   # 920 x 25
+labels = pd.read_csv("dados/visuais/labels.csv")                 # 120 imagens rotuladas
 texto = open("assets/textos/01_opas_oms_doencas_cardiovasculares_pt.txt", encoding="utf-8").read()
 ```
 
@@ -328,8 +330,9 @@ texto = open("assets/textos/01_opas_oms_doencas_cardiovasculares_pt.txt", encodi
 * **1.0.0 — 02/09/2026**
     * Fase 1 completa: dataset numérico (920 pacientes), corpus textual (4 textos) e
       conjunto visual (120 ECGs rotulados).
-    * Pipelines reprodutíveis para os três conjuntos.
+    * Pipelines reprodutíveis para os três conjuntos + notebook de carregamento.
     * Documento-resumo, análise de governança e viés, documento do projeto (modelo FIAP).
+    * Pacote de dados publicado (GitHub Release `v1.0-fase1` + Google Drive).
 
 ---
 

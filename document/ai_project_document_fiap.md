@@ -135,7 +135,7 @@ doentes), **viés de sexo** (79% homens; recall potencialmente menor em mulheres
 
 Não aplicável nesta fase (sem interface com usuário final). O "usuário" desta entrega é
 a própria equipe nas fases seguintes; o feedback esperado é a facilidade de carregar os
-dados em Colab/Jupyter — por isso a pasta `notebooks/` e os scripts de ingestão.
+dados em Colab/Jupyter — por isso o notebook `notebooks/00_carregar_dados.ipynb` e os scripts de ingestão.
 
 # <a name="c5"></a>5. Conclusões e Trabalhos Futuros
 

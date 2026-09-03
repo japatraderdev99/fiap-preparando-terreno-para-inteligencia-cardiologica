@@ -99,7 +99,7 @@ dados/
   visuais/       Parte 3 — 120 PNG + labels.csv + amostras/ + LEIA-ME.md + pipeline
 document/            este resumo + governança + documento do projeto (modelo FIAP)
 scripts/         download dos dados brutos + empacotamento da entrega
-notebooks/       reservada para os notebooks de Colab/Jupyter das próximas fases
+notebooks/       00_carregar_dados.ipynb (carrega e verifica os 3 conjuntos)
 ```
 
 ## 8. Links públicos para os dados
