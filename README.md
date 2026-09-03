@@ -95,7 +95,8 @@ fiap-preparando-terreno-para-inteligencia-cardiologica/
 │       └── gerar_imagens_ecg.py            ← pipeline reprodutível (PTB-XL → imagens rotuladas)
 │
 ├── document/
-│   ├── documento-resumo.md                 ← RESUMO EXECUTIVO da entrega
+│   ├── Documento-Resumo_CardioIA-Fase1_Guilherme-Yamada-Dantas_RM568506.pdf  ← DOCUMENTO-RESUMO (entrega)
+│   ├── documento-resumo.md                 ← versão em markdown do documento-resumo
 │   ├── governanca-dados-e-vies.md          ← análise completa de governança e viés
 │   └── ai_project_document_fiap.md         ← documento do projeto (modelo FIAP, preenchido)
 │
