@@ -247,11 +247,11 @@ e também empacotado para download direto, **acessível a qualquer pessoa sem lo
 | `cardioia-fase1-dados-textuais.zip` | Parte 2 — 4 textos + fontes/licenças | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-textuais.zip) |
 | `cardioia-fase1-dados-visuais.zip` | Parte 3 — 120 ECGs + `labels.csv` | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-visuais.zip) |
 
-**Página do release:** <https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1>
+**Página do release (armazenamento público, permanente, sem login):**
+<https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1>
 
-> Espelho no Google Drive (pasta "FIAP - CardioIA - Fase 1"): _link a incluir_ — o
-> GitHub Release acima já é um armazenamento público permanente e sem login, suficiente
-> para a correção.
+Os quatro `.zip` acima também estão espelhados em uma pasta do Google Drive
+("FIAP - CardioIA - Fase 1"), como redundância. Qualquer um dos links atende à correção.
 
 ---
 
