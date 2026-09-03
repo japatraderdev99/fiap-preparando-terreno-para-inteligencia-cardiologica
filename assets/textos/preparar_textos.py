@@ -2,7 +2,7 @@
 CardioIA - Fase 1 | Parte 2 (Dados textuais / NLP)
 Baixa e normaliza o corpus textual sobre doencas cardiovasculares.
 
-Saida: dados/2-textuais/NN_<slug>_<lang>.txt
+Saida: assets/textos/NN_<slug>_<lang>.txt
        Cada arquivo tem um cabecalho de metadados delimitado e, em seguida,
        o corpo em texto puro (UTF-8, sem HTML), pronto para tokenizacao.
 

@@ -112,8 +112,8 @@ estruturas foram desenhadas para as tarefas de IA das próximas fases:
 ## 3.3. Treinamento e Teste
 
 Não aplicável nesta fase. Foram produzidos **artefatos de avaliação de dados**:
-`dados/1-numericos/analise_exploratoria.md` (distribuições, ausência, prevalência por
-subgrupo) e `dados/3-visuais/labels.csv` (rótulos e metadados por imagem), que serão a
+`dados/numericos/analise_exploratoria.md` (distribuições, ausência, prevalência por
+subgrupo) e `dados/visuais/labels.csv` (rótulos e metadados por imagem), que serão a
 base para as divisões treino/validação/teste estratificadas nas próximas fases.
 
 # <a name="c4"></a>4. Resultados e Avaliações
@@ -172,8 +172,8 @@ governança tratada como requisito, não como texto de conclusão.
 
 # <a name="c7"></a>Anexos
 
-- **Anexo A** — `dados/1-numericos/dicionario_de_dados.md`: dicionário completo do dataset numérico.
-- **Anexo B** — `dados/1-numericos/analise_exploratoria.md`: EDA automática.
-- **Anexo C** — `dados/2-textuais/FONTES_E_LICENCAS.md`: fontes, licenças e plano de uso em NLP.
-- **Anexo D** — `dados/3-visuais/LEIA-ME.md` e `labels.csv`: descrição e rótulos das imagens.
+- **Anexo A** — `dados/numericos/dicionario_de_dados.md`: dicionário completo do dataset numérico.
+- **Anexo B** — `dados/numericos/analise_exploratoria.md`: EDA automática.
+- **Anexo C** — `assets/textos/FONTES_E_LICENCAS.md`: fontes, licenças e plano de uso em NLP.
+- **Anexo D** — `dados/visuais/LEIA-ME.md` e `labels.csv`: descrição e rótulos das imagens.
 - **Anexo E** — `docs/governanca-dados-e-vies.md`: análise de governança e viés.

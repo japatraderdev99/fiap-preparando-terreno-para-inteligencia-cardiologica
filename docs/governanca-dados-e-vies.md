@@ -10,7 +10,7 @@
 
 | Princípio | Como foi aplicado no repositório |
 |---|---|
-| **Proveniência / rastreabilidade** | Toda fonte tem URL, DOI/ID, ano e licença registrados (`dados/*/`). Os dados brutos ficam versionados em `dados/1-numericos/brutos/`. |
+| **Proveniência / rastreabilidade** | Toda fonte tem URL, DOI/ID, ano e licença registrados (`dados/*/`). Os dados brutos ficam versionados em `dados/numericos/brutos/`. |
 | **Reprodutibilidade** | Os três conjuntos são regeneráveis por script (`preparar_dados_numericos.py`, `preparar_textos.py`, `gerar_imagens_ecg.py`). Nada foi editado à mão. |
 | **Licenciamento explícito** | UCI Heart Disease e PTB-XL são **CC BY 4.0**; textos são domínio público, exceto o artigo SciELO (**CC BY-NC 3.0** — uso não comercial). Registrado em `CITACOES.md` e nos LEIA-ME. |
 | **Minimização e anonimização** | Nenhum dado identifica pacientes. Identificadores são sintéticos; idades > 89 da PTB-XL (anonimizadas como "300") foram removidas da amostra. |
@@ -22,7 +22,7 @@
 
 ## 2. Viés no dataset numérico (UCI Heart Disease)
 
-Números extraídos de `dados/1-numericos/analise_exploratoria.md`.
+Números extraídos de `dados/numericos/analise_exploratoria.md`.
 
 ### 2.1. Viés de seleção por instituição
 | Base | Pacientes | % com doença | Idade média |

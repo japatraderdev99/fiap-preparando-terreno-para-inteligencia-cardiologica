@@ -14,7 +14,7 @@ O que este script faz
 3. Baixa a forma de onda de 12 derivacoes (500 Hz, 10 s) de cada registro.
 4. Renderiza cada exame como um traçado clinico padrao de 12 derivacoes
    (grade "papel de ECG" 25 mm/s, 10 mm/mV) e salva em ecg_images/*.png.
-5. Escreve dados/3-visuais/labels.csv com o rotulo de cada imagem
+5. Escreve dados/visuais/labels.csv com o rotulo de cada imagem
    (superclasse, codigos SCP, idade, sexo, eixo, laudo textual).
 
 Uso

@@ -9,20 +9,21 @@ rm -rf "$OUT" && mkdir -p "$OUT"
 
 echo ">> Parte 1 - numerico"
 zip -qr "$OUT/cardioia-fase1-dados-numericos.zip" \
-    dados/1-numericos -x '*/__pycache__/*'
+    dados/numericos -x '*/__pycache__/*'
 
 echo ">> Parte 2 - textual"
 zip -qr "$OUT/cardioia-fase1-dados-textuais.zip" \
-    dados/2-textuais -x '*/__pycache__/*'
+    assets/textos -x '*/__pycache__/*'
 
 echo ">> Parte 3 - visual (120 imagens de ECG + labels)"
 zip -qr "$OUT/cardioia-fase1-dados-visuais.zip" \
-    dados/3-visuais/ecg_images dados/3-visuais/labels.csv \
-    dados/3-visuais/amostras dados/3-visuais/LEIA-ME.md
+    dados/visuais/ecg_images dados/visuais/labels.csv \
+    dados/visuais/amostras dados/visuais/LEIA-ME.md
 
 echo ">> Pacote completo"
 zip -qr "$OUT/cardioia-fase1-dados-completo.zip" \
-    dados docs README.md CITACOES.md LICENSE -x '*/__pycache__/*' '*/_ptbxl_meta/*'
+    dados assets/textos docs README.md CITACOES.md LICENSE \
+    -x '*/__pycache__/*' '*/_ptbxl_meta/*'
 
 echo
 ls -lh "$OUT"

@@ -66,25 +66,25 @@ fiap-preparando-terreno-para-inteligencia-cardiologica/
 ├── CITACOES.md                  ← fontes, licenças e como citar
 ├── LICENSE                      ← CC BY 4.0
 │
-├── assets/                      ← imagens do repositório (logo FIAP)
+├── assets/
+│   ├── logo-fiap.png
+│   └── textos/                             ← PARTE 2 — corpus textual (NLP)
+│       ├── 01_opas_oms_doencas_cardiovasculares_pt.txt
+│       ├── 02_scielo_abc_prevalencia_doencas_cardiacas_pt.txt
+│       ├── 03_gutenberg_lettsomian_lectures_diseases_heart_en.txt
+│       ├── 04_gutenberg_arteriosclerosis_and_hypertension_en.txt
+│       ├── FONTES_E_LICENCAS.md            ← fontes + plano de uso em NLP
+│       └── preparar_textos.py              ← pipeline reprodutível (download + limpeza)
 │
 ├── dados/
-│   ├── 1-numericos/
+│   ├── numericos/                          ← PARTE 1 — dados clínicos tabulares (ML/IoT)
 │   │   ├── cardioia_heart_disease.csv      ← DATASET FINAL (920 pacientes × 25 colunas)
 │   │   ├── dicionario_de_dados.md          ← significado e relevância de cada variável
 │   │   ├── analise_exploratoria.md         ← EDA automática (distribuições, ausência, viés)
 │   │   ├── preparar_dados_numericos.py     ← pipeline reprodutível (bruto → limpo)
 │   │   └── brutos/                         ← dados originais da UCI (4 instituições)
 │   │
-│   ├── 2-textuais/
-│   │   ├── 01_opas_oms_doencas_cardiovasculares_pt.txt
-│   │   ├── 02_scielo_abc_prevalencia_doencas_cardiacas_pt.txt
-│   │   ├── 03_gutenberg_lettsomian_lectures_diseases_heart_en.txt
-│   │   ├── 04_gutenberg_arteriosclerosis_and_hypertension_en.txt
-│   │   ├── FONTES_E_LICENCAS.md            ← fontes + plano de uso em NLP
-│   │   └── preparar_textos.py              ← pipeline reprodutível (download + limpeza)
-│   │
-│   └── 3-visuais/
+│   └── visuais/                            ← PARTE 3 — imagens de ECG (Visão Computacional)
 │       ├── ecg_images/                     ← 120 ECGs de 12 derivações (.png)
 │       ├── labels.csv                      ← rótulo diagnóstico + metadados de cada imagem
 │       ├── amostras/                       ← 10 imagens (2 por classe) para visualização rápida
@@ -109,7 +109,7 @@ fiap-preparando-terreno-para-inteligencia-cardiologica/
 
 ## 🩺 Parte 1 — Dados Numéricos (ML / IoT)
 
-**Arquivo:** `dados/1-numericos/cardioia_heart_disease.csv` · **920 linhas × 25 colunas** ·
+**Arquivo:** `dados/numericos/cardioia_heart_disease.csv` · **920 linhas × 25 colunas** ·
 mínimo exigido: 100 linhas.
 
 ### Origem — dados **reais**
@@ -120,7 +120,7 @@ Institute of Cardiology (Budapeste), University Hospitals de Zurique e Basileia 
 e V.A. Medical Center de Long Beach (EUA). Licença **CC BY 4.0**. É o dataset de
 referência da literatura para predição de doença arterial coronariana.
 
-O script [`preparar_dados_numericos.py`](dados/1-numericos/preparar_dados_numericos.py)
+O script [`preparar_dados_numericos.py`](dados/numericos/preparar_dados_numericos.py)
 une as 4 bases, corrige tipos, converte "zeros clínicos impossíveis" (colesterol ou
 pressão iguais a 0) em valor ausente, adiciona colunas legíveis em português e as duas
 variáveis-alvo, e gera a análise exploratória.
@@ -143,7 +143,7 @@ variáveis-alvo, e gera a análise exploratória.
 **Variáveis-alvo:** `doenca_cardiaca` (binária, `0/1`) e `diagnostico_num` (0–4, nº de
 vasos obstruídos) para tarefas multiclasse/ordinais.
 
-### Já documentado (ver [EDA](dados/1-numericos/analise_exploratoria.md))
+### Já documentado (ver [EDA](dados/numericos/analise_exploratoria.md))
 - 55,3% dos pacientes têm doença cardíaca (base relativamente balanceada no alvo).
 - **Viés de sexo:** 78,9% são homens.
 - **Viés de seleção:** base da Suíça com 93,5% de doentes (hospital terciário).
@@ -153,7 +153,7 @@ vasos obstruídos) para tarefas multiclasse/ordinais.
 
 ## 📚 Parte 2 — Dados Textuais (NLP)
 
-**Pasta:** `dados/2-textuais/` · **4 arquivos `.txt`**, ~93 mil palavras · mínimo exigido: 2.
+**Pasta:** `assets/textos/` · **4 arquivos `.txt`**, ~93 mil palavras · mínimo exigido: 2.
 
 | # | Texto | Idioma | Fonte | Licença |
 |---|---|---|---|---|
@@ -163,7 +163,7 @@ vasos obstruídos) para tarefas multiclasse/ordinais.
 | 04 | *Arteriosclerosis and Hypertension* (1912) | EN | Project Gutenberg #37675 | Domínio público |
 
 Cada `.txt` tem um cabeçalho `METADADOS` delimitado e o corpo já normalizado para texto
-puro UTF-8. Gerados por [`preparar_textos.py`](dados/2-textuais/preparar_textos.py).
+puro UTF-8. Gerados por [`preparar_textos.py`](assets/textos/preparar_textos.py).
 
 ### Como esses textos podem ser explorados por algoritmos de NLP — e por que é relevante
 
@@ -178,13 +178,13 @@ puro UTF-8. Gerados por [`preparar_textos.py`](dados/2-textuais/preparar_textos.
 **Por que importa:** a maior parte da informação clínica real é **texto livre**
 (evoluções, laudos, anamnese). Sem NLP, essa informação não chega aos modelos — e a
 triagem depende exatamente de converter texto em dado estruturado. Detalhes e plano
-completo em [`FONTES_E_LICENCAS.md`](dados/2-textuais/FONTES_E_LICENCAS.md).
+completo em [`FONTES_E_LICENCAS.md`](assets/textos/FONTES_E_LICENCAS.md).
 
 ---
 
 ## 🖼️ Parte 3 — Dados Visuais (Visão Computacional)
 
-**Pasta:** `dados/3-visuais/ecg_images/` · **120 imagens `.png`** · mínimo exigido: 100.
+**Pasta:** `dados/visuais/ecg_images/` · **120 imagens `.png`** · mínimo exigido: 100.
 
 ### Origem — sinais **reais**, renderizados no formato clínico
 
@@ -192,9 +192,9 @@ Imagens de **ECG de 12 derivações** geradas a partir de sinais reais da base
 **PTB-XL** (18.885 pacientes, PhysioNet, licença **CC BY 4.0**). Cada imagem é um ECG
 de 10 segundos de um paciente real, plotado no padrão que o cardiologista lê
 (25 mm/s, 10 mm/mV, grade "papel de ECG"). Gerador:
-[`gerar_imagens_ecg.py`](dados/3-visuais/gerar_imagens_ecg.py).
+[`gerar_imagens_ecg.py`](dados/visuais/gerar_imagens_ecg.py).
 
-### Rotulado e balanceado — [`labels.csv`](dados/3-visuais/labels.csv)
+### Rotulado e balanceado — [`labels.csv`](dados/visuais/labels.csv)
 
 | Classe | Código | Imagens | Achado |
 |---|---|---|---|
@@ -223,31 +223,35 @@ nem toda unidade tem cardiologista de plantão para interpretá-lo. Um classific
 confiável funciona como **segunda opinião** e como **ordenador de fila**. Erros têm
 custo assimétrico (não ver um infarto é muito pior que um falso alarme), e ter rótulos
 por classe desde já permite otimizar sensibilidade. Detalhes em
-[`LEIA-ME.md`](dados/3-visuais/LEIA-ME.md).
+[`LEIA-ME.md`](dados/visuais/LEIA-ME.md).
 
 ### Amostras
 
 <p align="center">
-<img src="dados/3-visuais/amostras/ECG_10289_NORM.png" width="45%">
-<img src="dados/3-visuais/amostras/ECG_15324_MI.png" width="45%">
+<img src="dados/visuais/amostras/ECG_10289_NORM.png" width="45%">
+<img src="dados/visuais/amostras/ECG_15324_MI.png" width="45%">
 </p>
-<p align="center"><em>Esquerda: ECG normal (NORM). Direita: infarto do miocárdio (MI). Mais amostras em <code>dados/3-visuais/amostras/</code>.</em></p>
+<p align="center"><em>Esquerda: ECG normal (NORM). Direita: infarto do miocárdio (MI). Mais amostras em <code>dados/visuais/amostras/</code>.</em></p>
 
 ---
 
 ## 🔗 Links públicos para o conjunto completo de dados
 
 O conjunto completo (numérico + textual + visual) está **versionado neste repositório**
-e também empacotado para download direto:
+e também empacotado para download direto, **acessível a qualquer pessoa sem login**:
 
-| Pacote | Link |
-|---|---|
-| **GitHub Release `v1.0-fase1`** (recomendado — público e permanente) | https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1 |
-| Espelho Google Drive | https://drive.google.com/drive/folders/COLOQUE_O_ID_AQUI?usp=sharing |
+| Pacote | Conteúdo | Link |
+|---|---|---|
+| `cardioia-fase1-dados-completo.zip` | Tudo (numérico + textual + visual + docs) | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-completo.zip) |
+| `cardioia-fase1-dados-numericos.zip` | Parte 1 — UCI Heart Disease + dicionário + EDA | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-numericos.zip) |
+| `cardioia-fase1-dados-textuais.zip` | Parte 2 — 4 textos + fontes/licenças | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-textuais.zip) |
+| `cardioia-fase1-dados-visuais.zip` | Parte 3 — 120 ECGs + `labels.csv` | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-visuais.zip) |
 
-> Os arquivos do Release (`cardioia-fase1-dados-completo.zip`, e os pacotes por parte)
-> são baixáveis por qualquer pessoa, sem login — o time da FIAP pode acessá-los
-> diretamente para correção.
+**Página do release:** <https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1>
+
+> Espelho no Google Drive (pasta "FIAP - CardioIA - Fase 1"): _link a incluir_ — o
+> GitHub Release acima já é um armazenamento público permanente e sem login, suficiente
+> para a correção.
 
 ---
 
@@ -262,23 +266,23 @@ pip install pandas numpy matplotlib scipy wfdb
 **Regenerar cada conjunto de dados (opcional — os dados já estão no repositório):**
 
 ```bash
-# Parte 1 — dataset numérico (rápido; usa os dados brutos em dados/1-numericos/brutos/)
-python dados/1-numericos/preparar_dados_numericos.py
+# Parte 1 — dataset numérico (rápido; usa os dados brutos em dados/numericos/brutos/)
+python dados/numericos/preparar_dados_numericos.py
 
 # Parte 2 — corpus textual (baixa das fontes públicas)
-python dados/2-textuais/preparar_textos.py
+python assets/textos/preparar_textos.py
 
 # Parte 3 — 120 imagens de ECG (baixa sinais da PTB-XL; ~5 min)
-python dados/3-visuais/gerar_imagens_ecg.py --por-classe 24
+python dados/visuais/gerar_imagens_ecg.py --por-classe 24
 ```
 
 **Carregar os dados em um notebook (Colab/Jupyter):**
 
 ```python
 import pandas as pd
-df = pd.read_csv("dados/1-numericos/cardioia_heart_disease.csv")
-labels = pd.read_csv("dados/3-visuais/labels.csv")
-texto = open("dados/2-textuais/01_opas_oms_doencas_cardiovasculares_pt.txt", encoding="utf-8").read()
+df = pd.read_csv("dados/numericos/cardioia_heart_disease.csv")
+labels = pd.read_csv("dados/visuais/labels.csv")
+texto = open("assets/textos/01_opas_oms_doencas_cardiovasculares_pt.txt", encoding="utf-8").read()
 ```
 
 ---

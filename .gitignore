@@ -12,7 +12,8 @@ Thumbs.db
 .idea/
 
 # --- Caches de dados (regeneráveis pelos scripts) ---
-dados/3-visuais/_ptbxl_meta/
+dados/visuais/_ptbxl_meta/
+_ptbxl_meta/
 *.zip
 
 # --- Entrega empacotada (gerada por scripts/empacotar_entrega.sh) ---

@@ -26,9 +26,9 @@ Tudo com **governança de dados e atenção a viés** desde o primeiro dado.
 
 | Parte | Entregável | Quantidade | Mínimo exigido | Fonte | Tipo |
 |---|---|---|---|---|---|
-| 1 — Numérico | `dados/1-numericos/cardioia_heart_disease.csv` | **920 pacientes**, 25 colunas | 100 linhas | UCI Heart Disease (Cleveland, Hungria, Suíça, V.A.) | **Real** |
-| 2 — Textual | `dados/2-textuais/*.txt` | **4 textos**, ~93 mil palavras, PT + EN | 2 textos | OPAS/OMS, SciELO, Project Gutenberg | Real |
-| 3 — Visual | `dados/3-visuais/ecg_images/*.png` + `labels.csv` | **120 ECGs de 12 derivações**, rotulados | 100 imagens | PTB-XL / PhysioNet | **Real** |
+| 1 — Numérico | `dados/numericos/cardioia_heart_disease.csv` | **920 pacientes**, 25 colunas | 100 linhas | UCI Heart Disease (Cleveland, Hungria, Suíça, V.A.) | **Real** |
+| 2 — Textual | `assets/textos/*.txt` | **4 textos**, ~93 mil palavras, PT + EN | 2 textos | OPAS/OMS, SciELO, Project Gutenberg | Real |
+| 3 — Visual | `dados/visuais/ecg_images/*.png` + `labels.csv` | **120 ECGs de 12 derivações**, rotulados | 100 imagens | PTB-XL / PhysioNet | **Real** |
 
 Todos os conjuntos são **regeneráveis por script** e têm **licença compatível**
 (CC BY 4.0, domínio público; o artigo SciELO é CC BY-NC 3.0).
@@ -93,11 +93,11 @@ Documento completo: [`governanca-dados-e-vies.md`](governanca-dados-e-vies.md).
 ## 7. Estrutura do repositório
 
 ```
+assets/textos/   Parte 2 — 4 .txt + FONTES_E_LICENCAS.md + pipeline (NLP)
 dados/
-  1-numericos/   CSV final + dicionário + EDA + pipeline + dados brutos
-  2-textuais/    4 .txt + FONTES_E_LICENCAS.md + pipeline
-  3-visuais/     120 PNG + labels.csv + amostras/ + LEIA-ME.md + pipeline
-docs/            este resumo + governança + documento do projeto (template FIAP)
+  numericos/     Parte 1 — CSV final + dicionário + EDA + pipeline + dados brutos
+  visuais/       Parte 3 — 120 PNG + labels.csv + amostras/ + LEIA-ME.md + pipeline
+docs/            este resumo + governança + documento do projeto (modelo FIAP)
 scripts/         download dos dados brutos + empacotamento da entrega
 notebooks/       reservada para os notebooks de Colab/Jupyter das próximas fases
 ```

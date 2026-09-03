@@ -2,9 +2,9 @@
 CardioIA - Fase 1 | Parte 1 (Dados numericos / IoT clinico)
 Pipeline reproduzivel: dados BRUTOS da UCI -> dataset LIMPO e documentado.
 
-Entrada  : dados/1-numericos/brutos/processed.{cleveland,hungarian,switzerland,va}.data
-Saida    : dados/1-numericos/cardioia_heart_disease.csv   (dataset final, 1 linha = 1 paciente)
-           dados/1-numericos/analise_exploratoria.md       (resumo estatistico auto-gerado)
+Entrada  : dados/numericos/brutos/processed.{cleveland,hungarian,switzerland,va}.data
+Saida    : dados/numericos/cardioia_heart_disease.csv   (dataset final, 1 linha = 1 paciente)
+           dados/numericos/analise_exploratoria.md       (resumo estatistico auto-gerado)
 
 Fonte
 -----
