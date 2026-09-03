@@ -1,0 +1,19 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- SO / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Caches de dados (regeneráveis pelos scripts) ---
+dados/3-visuais/_ptbxl_meta/
+*.zip
+
+# --- Entrega empacotada (gerada por scripts/empacotar_entrega.sh) ---
+entrega/
