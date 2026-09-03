@@ -97,7 +97,7 @@ assets/textos/   Parte 2 — 4 .txt + FONTES_E_LICENCAS.md + pipeline (NLP)
 dados/
   numericos/     Parte 1 — CSV final + dicionário + EDA + pipeline + dados brutos
   visuais/       Parte 3 — 120 PNG + labels.csv + amostras/ + LEIA-ME.md + pipeline
-docs/            este resumo + governança + documento do projeto (modelo FIAP)
+document/            este resumo + governança + documento do projeto (modelo FIAP)
 scripts/         download dos dados brutos + empacotamento da entrega
 notebooks/       reservada para os notebooks de Colab/Jupyter das próximas fases
 ```

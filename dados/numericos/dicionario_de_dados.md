@@ -17,7 +17,7 @@ dos dados brutos da UCI (pasta [`brutos/`](brutos/)).
 | Coluna | Tipo | Descrição |
 |---|---|---|
 | `id_paciente` | texto | Identificador sintético (`CLE-0001`, `HUN-0002`, …). Não é dado real de paciente. |
-| `origem` | categórico | Instituição de coleta: `cleveland`, `hungarian`, `switzerland`, `va`. **Relevante para análise de viés** (ver `docs/governanca-dados-e-vies.md`). |
+| `origem` | categórico | Instituição de coleta: `cleveland`, `hungarian`, `switzerland`, `va`. **Relevante para análise de viés** (ver `document/governanca-dados-e-vies.md`). |
 
 ## 2. Variáveis clínicas (preditores)
 

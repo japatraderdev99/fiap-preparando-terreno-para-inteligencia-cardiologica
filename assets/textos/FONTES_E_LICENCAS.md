@@ -78,5 +78,5 @@ de fonte.
 - A licença de cada item está registrada acima e no cabeçalho de cada `.txt`.
 - O texto 02 é **CC BY-NC**: uso **não comercial**. Aceitável para projeto acadêmico;
   registrado aqui para não ser esquecido em um eventual uso comercial futuro.
-- Ver `docs/governanca-dados-e-vies.md` para a discussão completa (idioma, época,
+- Ver `document/governanca-dados-e-vies.md` para a discussão completa (idioma, época,
   viés de fonte).

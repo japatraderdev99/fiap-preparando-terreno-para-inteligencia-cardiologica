@@ -76,7 +76,7 @@ que o rótulo da imagem seja limpo.
   falso alarme. Ter rótulos por classe desde já permite otimizar sensibilidade e medir
   esse trade-off.
 
-## Limitações e viés (resumo — ver `docs/governanca-dados-e-vies.md`)
+## Limitações e viés (resumo — ver `document/governanca-dados-e-vies.md`)
 
 - **População alemã**, equipamento e prática dos anos 1989–1996: a distribuição de
   achados e a "aparência" do traçado podem não representar a população brasileira.

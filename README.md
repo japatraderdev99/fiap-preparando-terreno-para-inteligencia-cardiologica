@@ -9,8 +9,12 @@
 # CardioIA — Fase 1: Batimentos de Dados
 ### A Busca de Dados: Preparando o Terreno para a Inteligência Cardiológica
 
+## Grupo
+
+Trabalho individual.
+
 ## 👨‍🎓 Integrantes
-- <a href="https://www.linkedin.com/">Guilherme Yamada Dantas — RM rm568506</a>
+- <a href="https://www.linkedin.com/">Guilherme Yamada Dantas</a> — RM rm568506
 
 ## 👩‍🏫 Professores
 ### Tutor(a)
@@ -92,18 +96,36 @@ fiap-preparando-terreno-para-inteligencia-cardiologica/
 │       ├── scp_statements.csv              ← dicionário de códigos SCP-ECG (PTB-XL)
 │       └── gerar_imagens_ecg.py            ← pipeline reprodutível (PTB-XL → imagens rotuladas)
 │
-├── docs/
+├── document/
 │   ├── documento-resumo.md                 ← RESUMO EXECUTIVO da entrega
 │   ├── governanca-dados-e-vies.md          ← análise completa de governança e viés
 │   └── ai_project_document_fiap.md         ← documento do projeto (modelo FIAP, preenchido)
 │
 ├── scripts/
 │   ├── baixar_dados_brutos.sh              ← baixa os dados brutos (UCI + metadados PTB-XL)
-│   └── empacotar_entrega.sh               ← gera os .zip do pacote público
+│   └── empacotar_entrega.sh                ← gera os .zip do pacote público
 │
-├── notebooks/                              ← reservada para os notebooks de Colab/Jupyter das próximas fases
-└── src/                                    ← reservada para o código-fonte das próximas fases
+├── .github/                                ← arquivos de configuração do GitHub
+├── config/                                 ← (reservada) arquivos de configuração das próximas fases
+├── notebooks/                              ← (reservada) notebooks de Colab/Jupyter das próximas fases
+└── src/                                    ← (reservada) código-fonte das próximas fases
 ```
+
+Este repositório parte do **[template oficial da FIAP](https://github.com/agodoi/templateFiapVfinal)**.
+As pastas herdadas do template:
+
+- **`.github`**: arquivos de configuração do GitHub.
+- **`assets`**: elementos não-estruturados do repositório — a logo da FIAP e, nesta fase,
+  o **corpus textual** da Parte 2 (subpasta `assets/textos/`, conforme o enunciado).
+- **`config`**: arquivos de configuração do projeto (reservada para as próximas fases).
+- **`document`**: todos os documentos do projeto — o documento-resumo, a análise de
+  governança e viés e o documento do projeto no modelo FIAP.
+- **`scripts`**: scripts auxiliares (download dos dados brutos e empacotamento da entrega).
+- **`src`**: código-fonte do projeto ao longo das 7 fases (reservada).
+
+Pastas adicionadas nesta fase: **`dados/`** (datasets numérico e visual + pipelines) e
+**`notebooks/`** (reservada para os notebooks que consumirão estes dados no Colab/Jupyter,
+conforme a dica do enunciado).
 
 ---
 

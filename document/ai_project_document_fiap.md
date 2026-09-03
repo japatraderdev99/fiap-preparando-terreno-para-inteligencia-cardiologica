@@ -176,4 +176,4 @@ governança tratada como requisito, não como texto de conclusão.
 - **Anexo B** — `dados/numericos/analise_exploratoria.md`: EDA automática.
 - **Anexo C** — `assets/textos/FONTES_E_LICENCAS.md`: fontes, licenças e plano de uso em NLP.
 - **Anexo D** — `dados/visuais/LEIA-ME.md` e `labels.csv`: descrição e rótulos das imagens.
-- **Anexo E** — `docs/governanca-dados-e-vies.md`: análise de governança e viés.
+- **Anexo E** — `document/governanca-dados-e-vies.md`: análise de governança e viés.
