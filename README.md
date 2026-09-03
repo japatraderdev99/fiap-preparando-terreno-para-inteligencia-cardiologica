@@ -175,7 +175,7 @@ vasos obstruídos) para tarefas multiclasse/ordinais.
 O dataset numérico está no repositório (`dados/numericos/`) e também empacotado, para
 download sem login, em
 [`cardioia-fase1-dados-numericos.zip`](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-numericos.zip)
-(GitHub Release · espelho no Google Drive — ver [🔗 Links públicos](#-links-públicos-para-o-conjunto-completo-de-dados)).
+(GitHub Release) ou na [pasta pública do Google Drive](https://drive.google.com/drive/folders/16FjfiQG6EJJIPeHYDrwGwO5cVUbyqvz3?usp=sharing). Ver também [Links públicos](#-links-públicos-para-o-conjunto-completo-de-dados).
 
 ---
 
@@ -265,27 +265,29 @@ por classe desde já permite otimizar sensibilidade. Detalhes em
 As 120 imagens estão no repositório (`dados/visuais/ecg_images/`) e também empacotadas,
 para download sem login, em
 [`cardioia-fase1-dados-visuais.zip`](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-visuais.zip)
-(GitHub Release · espelho no Google Drive — ver [🔗 Links públicos](#-links-públicos-para-o-conjunto-completo-de-dados)).
+(GitHub Release) ou na [pasta pública do Google Drive](https://drive.google.com/drive/folders/16FjfiQG6EJJIPeHYDrwGwO5cVUbyqvz3?usp=sharing). Ver também [Links públicos](#-links-públicos-para-o-conjunto-completo-de-dados).
 
 ---
 
 ## 🔗 Links públicos para o conjunto completo de dados
 
 O conjunto completo (numérico + textual + visual) está **versionado neste repositório**
-e também empacotado para download direto, **acessível a qualquer pessoa sem login**:
+e também empacotado para download direto, **acessível a qualquer pessoa sem login**, em
+dois locais:
 
-| Pacote | Conteúdo | Link |
+- **Google Drive** (pasta "FIAP - CardioIA - Fase 1", "qualquer pessoa com o link"):
+  <https://drive.google.com/drive/folders/16FjfiQG6EJJIPeHYDrwGwO5cVUbyqvz3?usp=sharing>
+- **GitHub Release `v1.0-fase1`** (armazenamento público e permanente):
+  <https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1>
+
+Os dois locais contêm os mesmos quatro `.zip`:
+
+| Pacote | Conteúdo | Download direto (GitHub Release) |
 |---|---|---|
-| `cardioia-fase1-dados-completo.zip` | Tudo (numérico + textual + visual + docs) | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-completo.zip) |
-| `cardioia-fase1-dados-numericos.zip` | Parte 1 — UCI Heart Disease + dicionário + EDA | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-numericos.zip) |
-| `cardioia-fase1-dados-textuais.zip` | Parte 2 — 4 textos + fontes/licenças | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-textuais.zip) |
-| `cardioia-fase1-dados-visuais.zip` | Parte 3 — 120 ECGs + `labels.csv` | [⬇️ download](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-visuais.zip) |
-
-**Página do release (armazenamento público, permanente, sem login):**
-<https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1>
-
-Os quatro `.zip` acima também estão espelhados em uma pasta do Google Drive
-("FIAP - CardioIA - Fase 1"), como redundância. Qualquer um dos links atende à correção.
+| `cardioia-fase1-dados-completo.zip` | Tudo (numérico + textual + visual + docs) | [⬇️](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-completo.zip) |
+| `cardioia-fase1-dados-numericos.zip` | Parte 1 — UCI Heart Disease + dicionário + EDA | [⬇️](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-numericos.zip) |
+| `cardioia-fase1-dados-textuais.zip` | Parte 2 — 4 textos + fontes/licenças | [⬇️](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-textuais.zip) |
+| `cardioia-fase1-dados-visuais.zip` | Parte 3 — 120 ECGs + `labels.csv` | [⬇️](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-visuais.zip) |
 
 ---
 

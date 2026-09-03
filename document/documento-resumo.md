@@ -105,10 +105,12 @@ notebooks/       reservada para os notebooks de Colab/Jupyter das próximas fase
 ## 8. Links públicos para os dados
 
 O conjunto completo (numérico + textual + visual) está **versionado no próprio
-repositório** e também disponível como **pacote público (GitHub Release)**:
+repositório** e também empacotado (4 `.zip`) em dois locais públicos, acessíveis sem login:
 
-- **Release:** <https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1>
-- Espelho em nuvem (Google Drive): _ver seção "Links" do README.md_
+- **Google Drive** (pasta "FIAP - CardioIA - Fase 1", "qualquer pessoa com o link"):
+  <https://drive.google.com/drive/folders/16FjfiQG6EJJIPeHYDrwGwO5cVUbyqvz3?usp=sharing>
+- **GitHub Release `v1.0-fase1`:**
+  <https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/tag/v1.0-fase1>
 
 ## 9. Conclusão
 
