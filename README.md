@@ -171,6 +171,12 @@ vasos obstruídos) para tarefas multiclasse/ordinais.
 - **Viés de seleção:** base da Suíça com 93,5% de doentes (hospital terciário).
 - **Ausência não aleatória:** `ca` 66%, `thal` 53%, `slope` 34% — dependente da instituição.
 
+### 📥 Dados hospedados (link público)
+O dataset numérico está no repositório (`dados/numericos/`) e também empacotado, para
+download sem login, em
+[`cardioia-fase1-dados-numericos.zip`](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-numericos.zip)
+(GitHub Release · espelho no Google Drive — ver [🔗 Links públicos](#-links-públicos-para-o-conjunto-completo-de-dados)).
+
 ---
 
 ## 📚 Parte 2 — Dados Textuais (NLP)
@@ -254,6 +260,12 @@ por classe desde já permite otimizar sensibilidade. Detalhes em
 <img src="dados/visuais/amostras/ECG_15324_MI.png" width="45%">
 </p>
 <p align="center"><em>Esquerda: ECG normal (NORM). Direita: infarto do miocárdio (MI). Mais amostras em <code>dados/visuais/amostras/</code>.</em></p>
+
+### 📥 Imagens hospedadas (link público)
+As 120 imagens estão no repositório (`dados/visuais/ecg_images/`) e também empacotadas,
+para download sem login, em
+[`cardioia-fase1-dados-visuais.zip`](https://github.com/japatraderdev99/fiap-preparando-terreno-para-inteligencia-cardiologica/releases/download/v1.0-fase1/cardioia-fase1-dados-visuais.zip)
+(GitHub Release · espelho no Google Drive — ver [🔗 Links públicos](#-links-públicos-para-o-conjunto-completo-de-dados)).
 
 ---
 
